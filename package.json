@@ -1,35 +1,51 @@
 {
   "name": "node-php-password",
-  "version": "0.1.2",
+  "version": "1.0.0",
   "description": "A node compatibility layer to verify and hash php compatible password hashes",
-  "main": "index.js",
+  "main": "build/src/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alrek-consulting/node-php-password.git"
+    "url": "git+https://github.com/michaelkilian/node-php-password.git"
   },
   "keywords": [
     "php",
+    "php-password",
     "password",
     "security",
     "bcrypt",
     "hash"
   ],
   "scripts": {
-    "test": "mocha --reporter spec test"
+    "test": "jest && mocha --reporter spec test",
+    "build": "tsc"
   },
   "author": "Thomas Alrek <thomas@alrek.no>",
+  "contributors": [
+    {
+      "name": "Michael Kilian",
+      "email": "michael.kilian2406@gmail.com"
+    }
+  ],
   "license": "GPL-2.0",
   "bugs": {
-    "url": "https://github.com/alrek-consulting/node-php-password/issues"
+    "url": "https://github.com/michaelkilian/node-php-password/issues"
   },
-  "homepage": "https://github.com/alrek-consulting/node-php-password#readme",
+  "homepage": "https://github.com/michaelkilian/node-php-password#readme",
   "dependencies": {
     "bcryptjs": "^2.3.0",
     "glob": "^7.0.5"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "@types/glob": "^7.1.1",
+    "@types/jest": "^25.1.4",
+    "@types/node": "^13.9.5",
+    "chai": "^3.5.0",
+    "jest": "^25.2.3",
     "mocha": "^2.4.5",
-    "chai": "^3.5.0"
+    "ts-jest": "^25.2.1",
+    "ts-loader": "^6.2.2",
+    "typescript": "^3.8.3"
   },
   "aliases": {
     "PASSWORD_DEFAULT": "PASSWORD_BCRYPT"
