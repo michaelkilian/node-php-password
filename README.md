@@ -1,21 +1,21 @@
-# node-php-password
+# php-passwd
 
 *Verify password hashed generated in PHP, and hash passwords in the same format.*
 
 Designed to be **future proof** for new hashing algorithms.
 
-`php-password` is a solution for every kind of webapp which has a user database with passwords hashed with PHP's password_hash. Instead of starting from scratch, just use this package to get compatibility with PHP.
+`php-passwd` is a solution for every kind of webapp which has a user database with passwords hashed with PHP's password_hash. Instead of starting from scratch, just use this package to get compatibility with PHP.
 
 ## Installation
 
 ```bash
-yarn add php-password
+yarn add php-passwd
 ```
 
 ## Usage
 
 ```TypeScript
-import php_password from 'php-password';
+import php_password from 'php-passwd';
 
 const hash = php_password.hash('password123');
 // php_password.hash(password, [algorithm], [options]);
@@ -34,7 +34,7 @@ const hash = php_password.hash('password123');
 ## To verify a password against an existing hash in a database o.l:
 
 ```TypeScript
-import php_password from 'php-password';
+import php_password from 'php-passwd';
 const hash = "$2y$10$8mNOnsos8qo4qHLcd32zrOg7gmyvfZ6/o9.2nsP/u6TRbrANdLREy";
 
 if (php_password.verify('password123', hash)){
@@ -47,7 +47,7 @@ if (php_password.verify('password123', hash)){
 ## Options
 
 ```TypeScript
-import php_password from 'php-password';
+import php_password from 'php-passwd';
 
 /*
  * Valid algorithms are "PASSWORD_DEFAULT", and "PASSWORD_BCRYPT"
@@ -74,7 +74,7 @@ The cost value should be set to a value that makes the hashing take at least 50m
 If you have a mix of passwords hashed with different algorithms (md5, sha256, etc...), or with a different cost value, you can check if they comply with your password policy by checking if they need a rehash. If they do, you can prompt your user to update their password.
 
 ```TypeScript
-import php_password from 'php-password';
+import php_password from 'php-passwd';
 const user_password = 'password123';
 const hash = php_password.hash(user_password, 'PASSWORD_DEFAULT', { cost: 10 });
 

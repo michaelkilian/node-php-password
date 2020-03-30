@@ -1,5 +1,5 @@
 {
-  "name": "php-password",
+  "name": "php-passwd",
   "version": "1.0.0",
   "description": "A node compatibility layer to verify and hash php compatible password hashes",
   "main": "build/src/index.js",
@@ -11,6 +11,8 @@
   "keywords": [
     "php",
     "php-password",
+    "passwd",
+    "php-passwd",
     "password",
     "security",
     "bcrypt",
